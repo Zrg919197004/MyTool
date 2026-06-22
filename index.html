@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="格速编是一款本地运行的 Word 批量格式处理工具，支持标题、正文、题注、目录、页眉页脚、模板套用和文档合并。"
+    />
+    <meta name="theme-color" content="#f7f9ff" />
+    <meta property="og:title" content="格速编 - 让 Word 排版更简单" />
+    <meta
+      property="og:description"
+      content="批量统一 Word 文档格式，本地处理，安全高效。"
+    />
+    <title>格速编 - 让 Word 排版更简单</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#top" aria-label="格速编首页">
+          <span class="brand-mark" aria-hidden="true">格</span>
+          <span>格速编</span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="主要导航">
+          <a href="#features">产品功能</a>
+          <a href="#audience">适用人群</a>
+          <a href="#download">软件下载</a>
+          <a href="#faq">常见问题</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="icon-button" id="theme-toggle" type="button" aria-label="切换深色模式">
+            <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11Z"></path>
+            </svg>
+          </button>
+          <a class="button button-small button-primary" href="#download">免费下载</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-glow hero-glow-left"></div>
+        <div class="hero-glow hero-glow-right"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow">
+              <span class="eyebrow-dot"></span>
+              Word 文档批量格式工具
+            </div>
+            <h1>复杂的排版，<br /><span>交给格速编。</span></h1>
+            <p class="hero-description">
+              批量统一标题、正文、题注、目录和页眉页脚。无需反复调整格式，
+              让规范文档从数小时缩短到几分钟。
+            </p>
+            <div class="hero-actions">
+              <a
+                class="button button-primary button-large"
+                id="primary-download"
+                href="#download"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path>
+                </svg>
+                <span id="primary-download-text">免费下载</span>
+              </a>
+              <a class="button button-secondary button-large" href="#features">了解产品</a>
+            </div>
+            <div class="hero-meta">
+              <span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m5 12 4 4L19 6"></path>
+                </svg>
+                本地处理
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m5 12 4 4L19 6"></path>
+                </svg>
+                无需登录
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m5 12 4 4L19 6"></path>
+                </svg>
+                安装即用
+              </span>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="格速编应用展示">
+            <div class="visual-orbit orbit-one"></div>
+            <div class="visual-orbit orbit-two"></div>
+            <div class="app-card">
+              <div class="app-card-header">
+                <div class="window-controls" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="app-card-title">
+                  <span class="mini-brand-mark" aria-hidden="true">格</span>
+                  格速编
+                </div>
+                <span class="app-status">本地运行</span>
+              </div>
+              <div class="app-card-body">
+                <div class="sidebar">
+                  <span class="sidebar-item active">
+                    <i></i>
+                    格式设置
+                  </span>
+                  <span class="sidebar-item">
+                    <i></i>
+                    模板套用
+                  </span>
+                  <span class="sidebar-item">
+                    <i></i>
+                    文档合并
+                  </span>
+                </div>
+                <div class="workspace">
+                  <div class="workspace-head">
+                    <div>
+                      <strong>文档格式设置</strong>
+                      <small>统一调整 Word 文档样式</small>
+                    </div>
+                    <span>3 个文件</span>
+                  </div>
+                  <div class="document-row selected">
+                    <div class="doc-icon">W</div>
+                    <div>
+                      <strong>项目实施方案.docx</strong>
+                      <small>正在分析文档结构</small>
+                    </div>
+                    <span class="progress-label">72%</span>
+                  </div>
+                  <div class="progress-track"><span></span></div>
+                  <div class="format-grid">
+                    <div class="format-item">
+                      <span class="format-glyph">题</span>
+                      <span>标题格式</span>
+                      <i>已设置</i>
+                    </div>
+                    <div class="format-item">
+                      <span class="format-glyph">文</span>
+                      <span>正文格式</span>
+                      <i>已设置</i>
+                    </div>
+                    <div class="format-item">
+                      <span class="format-glyph">注</span>
+                      <span>题注格式</span>
+                      <i>已设置</i>
+                    </div>
+                  </div>
+                  <div class="workspace-footer">
+                    <span>已启用原文件备份</span>
+                    <button type="button" tabindex="-1">开始处理</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="floating-chip chip-speed">
+              <span class="chip-icon">×10</span>
+              <div><strong>效率提升</strong><small>批量处理</small></div>
+            </div>
+            <div class="floating-chip chip-safe">
+              <span class="chip-icon shield">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3 5 6v5c0 4.5 2.9 8 7 10 4.1-2 7-5.5 7-10V6l-7-3Z"></path>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+              </span>
+              <div><strong>隐私安全</strong><small>文件不上云</small></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="产品优势">
+        <div class="container trust-grid">
+          <div><strong>多文件</strong><span>一键批量处理</span></div>
+          <div><strong>全流程</strong><span>覆盖完整排版</span></div>
+          <div><strong>零上传</strong><span>文档留在本机</span></div>
+          <div><strong>双平台</strong><span>Windows / macOS</span></div>
+        </div>
+      </section>
+
+      <section class="section features-section" id="features">
+        <div class="container">
+          <div class="section-heading centered">
+            <span class="section-label">核心功能</span>
+            <h2>一套工具，完成整篇文档排版</h2>
+            <p>从导入文件到规范输出，常用 Word 格式处理集中完成。</p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card feature-card-large">
+              <div class="feature-copy">
+                <span class="feature-number">01</span>
+                <h3>多级标题与正文统一</h3>
+                <p>分别设置各级标题和正文的字体、字号、颜色、对齐、缩进与段落间距。</p>
+                <ul>
+                  <li>自动识别标题层级</li>
+                  <li>支持正文样式批量应用</li>
+                  <li>多份文档一次处理</li>
+                </ul>
+              </div>
+              <span class="feature-art feature-art-heading" aria-hidden="true">题</span>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-number">02</span>
+              <div class="feature-icon soft-blue">
+                <span>注</span>
+              </div>
+              <h3>题注自动规范</h3>
+              <p>统一图片、表格和公式题注的样式与编号，减少逐项修改。</p>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-number">03</span>
+              <div class="feature-icon soft-violet">
+                <span>页</span>
+              </div>
+              <h3>目录与页眉页脚</h3>
+              <p>配置目录层级、页码样式，以及带动态变量的页眉页脚。</p>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-number">04</span>
+              <div class="feature-icon soft-cyan">
+                <span>封</span>
+              </div>
+              <h3>封面格式设置</h3>
+              <p>快速调整封面标题、字体、字号、对齐方式和页面间距。</p>
+            </article>
+
+            <article class="feature-card feature-card-wide">
+              <div>
+                <span class="feature-number">05</span>
+                <h3>模板套用与文档合并</h3>
+                <p>
+                  把标准样式快速应用到目标文档，并支持直接合并、分页合并及统一格式合并。
+                </p>
+                <div class="mini-tags">
+                  <span>标准模板复用</span>
+                  <span>多个文档合并</span>
+                  <span>统一目录页码</span>
+                </div>
+              </div>
+              <span class="feature-art feature-art-merge" aria-hidden="true">合</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section workflow-section">
+        <div class="container">
+          <div class="section-heading centered">
+            <span class="section-label">简单易用</span>
+            <h2>三步完成规范排版</h2>
+          </div>
+          <div class="workflow-grid">
+            <article>
+              <span>1</span>
+              <h3>导入文档</h3>
+              <p>添加单个文件、多个文件或整个文件夹，也可以直接拖拽。</p>
+            </article>
+            <div class="workflow-line"></div>
+            <article>
+              <span>2</span>
+              <h3>设置格式</h3>
+              <p>按需要配置标题、正文、题注、目录及页眉页脚。</p>
+            </article>
+            <div class="workflow-line"></div>
+            <article>
+              <span>3</span>
+              <h3>批量处理</h3>
+              <p>预览后开始处理，自动备份原文件并输出规范文档。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section audience-section" id="audience">
+        <div class="container audience-grid">
+          <div class="section-heading">
+            <span class="section-label">适用人群</span>
+            <h2>为经常与 Word 打交道的人而做</h2>
+            <p>
+              无论是论文、报告、标书还是制度文件，格速编都能帮助你把时间留给内容本身。
+            </p>
+            <a class="text-link" href="#download">
+              获取格速编
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+            </a>
+          </div>
+          <div class="audience-list">
+            <article>
+              <span class="audience-icon">研</span>
+              <div><h3>学生与科研人员</h3><p>毕业论文、学术论文、课题报告</p></div>
+            </article>
+            <article>
+              <span class="audience-icon">政</span>
+              <div><h3>行政与文秘人员</h3><p>公文、制度、总结和汇报材料</p></div>
+            </article>
+            <article>
+              <span class="audience-icon">企</span>
+              <div><h3>企业与项目团队</h3><p>项目方案、技术文档、投标文件</p></div>
+            </article>
+            <article>
+              <span class="audience-icon">师</span>
+              <div><h3>教师与培训机构</h3><p>教案、讲义、试题及课程资料</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section privacy-section">
+        <div class="container privacy-card">
+          <div class="privacy-visual">
+            <div class="privacy-ring">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="4" y="10" width="16" height="11" rx="3"></rect>
+                <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
+                <circle cx="12" cy="15.5" r="1"></circle>
+              </svg>
+            </div>
+          </div>
+          <div class="privacy-copy">
+            <span class="section-label light">隐私优先</span>
+            <h2>你的文档，只留在你的电脑里</h2>
+            <p>
+              格速编在本地读取和处理文件，不需要上传文档，也不依赖云端账号。
+              对于内部报告、合同、论文等敏感资料，使用更安心。
+            </p>
+            <div class="privacy-points">
+              <span>本地运行</span><span>不上传文件</span><span>自动备份</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section download-section" id="download">
+        <div class="container">
+          <div class="section-heading centered">
+            <span class="section-label">免费下载</span>
+            <h2>选择适合你的版本</h2>
+            <p id="system-message">正在识别你的操作系统...</p>
+          </div>
+
+          <div class="download-grid">
+            <article class="download-card" data-platform-card="windows">
+              <div class="recommended-badge" hidden>为你推荐</div>
+              <div class="platform-icon windows-icon" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <h3>Windows</h3>
+              <p>适用于 Windows 10 / 11，64 位系统</p>
+              <div class="download-meta"><span>Windows 版</span><span>即将发布</span></div>
+              <button class="button button-secondary platform-button" data-windows-wait type="button">
+                Windows 版筹备中
+              </button>
+            </article>
+
+            <article class="download-card" data-platform-card="macos">
+              <div class="recommended-badge" hidden>为你推荐</div>
+              <div class="platform-icon apple-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M17.1 12.5c0-2.7 2.2-4 2.3-4.1a5 5 0 0 0-3.9-2.1c-1.7-.2-3.2 1-4.1 1-.9 0-2.2-1-3.7-1-1.9 0-3.7 1.1-4.7 2.8-2 3.5-.5 8.7 1.4 11.5.9 1.4 2 2.9 3.5 2.8 1.4-.1 1.9-.9 3.6-.9 1.7 0 2.2.9 3.7.9s2.5-1.4 3.4-2.8c1.1-1.6 1.5-3.2 1.5-3.3-.1 0-3-.1-3-3.8ZM14.4 4.6A4.2 4.2 0 0 0 15.4 1a4.4 4.4 0 0 0-3 1.7 4 4 0 0 0-1 3.5 3.7 3.7 0 0 0 3-1.6Z"></path>
+                </svg>
+              </div>
+              <h3>macOS</h3>
+              <p>适用于 Apple 芯片 Mac，安装后可在“应用程序”中打开</p>
+              <div class="download-meta"><span>版本 2.1.0</span><span>约 35 MB</span></div>
+              <a
+                class="button button-primary platform-button"
+                data-download="macos"
+                href="https://github.com/Zrg919197004/MyTool/releases/download/v2.1.0/gesubian-macos-v2.1.0.pkg"
+                download
+              >
+                下载 macOS 版
+              </a>
+            </article>
+          </div>
+
+          <p class="download-note">
+            当前为初定版本。macOS 安装时如出现安全提示，请在“系统设置 → 隐私与安全性”中允许打开。
+          </p>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="faq">
+        <div class="container faq-layout">
+          <div class="section-heading">
+            <span class="section-label">常见问题</span>
+            <h2>开始使用前，你可能想知道</h2>
+            <p>还有建议或发现问题？欢迎通过页面底部的反馈入口联系我们。</p>
+          </div>
+          <div class="faq-list">
+            <details open>
+              <summary>格速编会上传我的文档吗？<span></span></summary>
+              <p>不会。文档读取、格式处理和输出均在你的电脑本地完成。</p>
+            </details>
+            <details>
+              <summary>支持哪些 Word 文件格式？<span></span></summary>
+              <p>当前主要支持 Microsoft Word 的 .docx 文件。</p>
+            </details>
+            <details>
+              <summary>处理后会覆盖原文件吗？<span></span></summary>
+              <p>默认可以另存为新文件，并支持在处理前自动备份，降低误操作风险。</p>
+            </details>
+            <details>
+              <summary>macOS 提示无法验证开发者怎么办？<span></span></summary>
+              <p>打开“系统设置 → 隐私与安全性”，找到格速编的拦截提示并选择“仍要打开”。</p>
+            </details>
+            <details>
+              <summary>现在使用需要付费吗？<span></span></summary>
+              <p>当前初定版本可免费下载使用。如果它帮你节省了时间，可以自愿支持项目继续完善。</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="support-section">
+        <div class="container support-card">
+          <div>
+            <span class="support-heart">♥</span>
+            <h2>觉得好用，欢迎支持格速编</h2>
+            <p>你的每一份支持，都会用于继续优化功能和使用体验。</p>
+          </div>
+          <button class="button button-light button-large" id="donate-button" type="button">
+            自愿打赏
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="#top">
+            <span class="brand-mark" aria-hidden="true">格</span>
+            <span>格速编</span>
+          </a>
+          <p>让规范排版更简单，让时间回到内容本身。</p>
+        </div>
+        <div class="footer-links">
+          <div><strong>产品</strong><a href="#features">产品功能</a><a href="#download">软件下载</a></div>
+          <div><strong>帮助</strong><a href="#faq">常见问题</a><a href="#audience">适用场景</a></div>
+          <div><strong>支持</strong><button type="button" data-open-donate>自愿打赏</button></div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span id="current-year"></span> 格速编</span>
+        <span>本地处理 · 隐私优先</span>
+      </div>
+    </footer>
+
+    <dialog class="modal" id="donate-modal" aria-labelledby="donate-title">
+      <button class="modal-close" type="button" aria-label="关闭" data-close-modal>×</button>
+      <div class="modal-icon">♥</div>
+      <h2 id="donate-title">感谢你的支持</h2>
+      <p>如果格速编帮你节省了时间，欢迎自愿打赏。打赏完全自愿，不影响任何功能使用。</p>
+      <div class="donate-methods">
+        <div class="donate-code wechat-code">
+          <div class="donate-code-head">
+            <span class="payment-mark">微</span>
+            <strong>微信支付</strong>
+          </div>
+          <img src="./donate-wechat.jpg" alt="格速编微信赞赏码" />
+          <small>打开微信扫一扫</small>
+        </div>
+        <div class="donate-code alipay-code">
+          <div class="donate-code-head">
+            <span class="payment-mark">支</span>
+            <strong>支付宝</strong>
+          </div>
+          <img src="./donate-alipay.jpg" alt="格速编支付宝收款码" />
+          <small>打开支付宝扫一扫</small>
+        </div>
+      </div>
+      <small class="modal-note">请勿在付款备注中填写个人隐私信息。</small>
+    </dialog>
+
+    <dialog class="modal compact-modal" id="windows-modal" aria-labelledby="windows-title">
+      <button class="modal-close" type="button" aria-label="关闭" data-close-modal>×</button>
+      <div class="modal-icon windows-modal-icon">▦</div>
+      <h2 id="windows-title">Windows 版正在筹备</h2>
+      <p>Windows 安装包完成发布后，这里会自动切换为下载按钮。</p>
+      <button class="button button-primary" type="button" data-close-modal>知道了</button>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

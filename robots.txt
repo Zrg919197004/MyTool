@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zrg919197004.github.io/MyTool/sitemap.xml
