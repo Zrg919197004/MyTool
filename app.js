@@ -56,7 +56,7 @@ const configureDownload = () => {
   if (platform === "macos") {
     systemMessage.textContent = "已识别为 macOS，为你推荐 macOS 版本。";
     primaryDownload.href =
-      "https://github.com/Zrg919197004/MyTool/releases/download/v2.1.0/gesubian-macos-v2.1.0.pkg";
+      "https://zrg919197004.github.io/MyTool/downloads/gesubian-macos-v2.1.0.pkg";
     primaryDownload.setAttribute("download", "");
     primaryDownloadText.textContent = "下载 macOS 版";
     return;
